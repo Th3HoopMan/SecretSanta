@@ -1,0 +1,7 @@
+<a (click)='onLogoutClick()' href='#'>Logout</a>
+<h2>Exchanges</h2>
+<ul>
+  <li *ngFor="let exchange of ownedExchanges">
+    {{exchange.name}}
+  </li>
+</ul>

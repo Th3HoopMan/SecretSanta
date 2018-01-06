@@ -1,0 +1,19 @@
+<h1>Create an account</h1>
+
+<form (ngSubmit)="onRegisterSubmit()" #register="ngForm">
+  <div class="form-group">
+    <input type="text" placeholder="Username" required [(ngModel)]="user.username" name="username"><br/>
+  </div>
+  <div class="form-group" >
+    <input type="text" placeholder="Email" required [(ngModel)]="user.email" name="email"/><br/>
+  </div>
+  <div class="form-group" >
+    <input type="password" placeholder="Password" required [(ngModel)]="user.password" name="password"/><br/>
+  </div>
+  <div class="form-group" >
+    <input type="password" placeholder="Re-Enter Password" required [(ngModel)]="secondPassword" name="secondPassword"/><br/>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </div>
+</form>

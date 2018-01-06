@@ -1,0 +1,34 @@
+<h1>Create an Exchange</h1>
+
+<form (ngSubmit)="onExchangeSubmit()" #exchangecreation="ngForm">
+  <div class="form-group">
+    Name of Exchange:<br>
+    <input type="text" required [(ngModel)]="exchange.name" name="name"><br>
+  </div>
+  <div class="form-group">
+    Short Desccription of Exchange:<br>
+    <textarea cols="30" rows="3" [(ngModel)]="exchange.description" name="description"></textarea><br>
+  </div>
+  <div class="form-group">
+    Exchange Dates<br>
+      <br>
+      Start:<br>
+      <input type="datetime-local" [(ngModel)]="exchange.startDate" name="startDate"><br>
+      Match Date:<br>
+      <input type="datetime-local" [(ngModel)]="exchange.matchDate" name="matchDate"><br>
+      End:<br>
+      <input type="datetime-local" [(ngModel)]="exchange.endDate" name="endDate"><br>
+  </div>
+  <div class="form-group">
+    Max # of Participants:<br>
+    <input type="number" min="0" [(ngModel)]="exchange.maxParticipants" name="maxParticipants"><br>
+  </div>
+  <div class="form-group">
+    Is this a Private or Public Exchange?<br>
+    <input type="radio" value="private" checked  [(ngModel)]="exchange.privacy" name="privacy"> Private
+    <input type="radio" value="public"  [(ngModel)]="exchange.privacy" name="privacy"> Public<br>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Create Exchange</button>
+  </div>
+</form>

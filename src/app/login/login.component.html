@@ -1,0 +1,11 @@
+<h1>Login</h1>
+<form (ngSubmit)="onLoginSubmit()" #login="ngForm">
+  <div class="form-group">
+    <input type type="text" placeholder="Username"  required [(ngModel)]="username" name="username"><br/>
+  </div>
+  <div class="form-group" >
+    <input type="password" placeholder="Password" required required [(ngModel)]="password" name="password"/><br/>
+  </div>
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
+<a routerLink="/register" routerLinkActive="active">Register</a>
